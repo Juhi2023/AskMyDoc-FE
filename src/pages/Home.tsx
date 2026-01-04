@@ -1,0 +1,34 @@
+'use client';
+
+import { useAuth } from '@/contexts/AuthContext';
+import { Navbar } from '@/components/landing/navbar';
+import { Hero } from '@/components/landing/hero';
+import { Features } from '@/components/landing/features';
+import { ToolsShowcase } from '@/components/landing/tools-showcase';
+import { Benefits } from '@/components/landing/benefits';
+import { CTA } from '@/components/landing/cta';
+import { Footer } from '@/components/landing/footer';
+import { useNavigate } from 'react-router-dom';
+
+export default function Home() {
+    const { isAuthenticated, isLoading } = useAuth();
+    const navigate = useNavigate();
+
+    // Redirect if authenticated
+    if (!isLoading && isAuthenticated) {
+        navigate('/dashboard');
+        return null;
+    }
+
+    return (
+        <main className="min-h-screen bg-dark-950 overflow-x-hidden">
+            <Navbar />
+            <Hero />
+            <Features />
+            <ToolsShowcase />
+            <Benefits />
+            <CTA />
+            <Footer />
+        </main>
+    );
+}
