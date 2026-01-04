@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSettings } from '@/contexts/settings-context';
 import {
     Bot, FileText, Search, Sliders, Save, RotateCcw,
@@ -32,7 +32,6 @@ export default function SettingsPage() {
         updateLLMSettings,
         updateDocumentSettings,
         updateSearchSettings,
-        updateUISettings,
         saveSettingsToServer,
         deleteApiKeyFromServer,
         resetSettings

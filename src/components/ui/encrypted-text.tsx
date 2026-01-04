@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useCallback, useRef, memo } from "react";
+import { useEffect, useState, useCallback, useRef, memo } from "react";
 import { cn } from "@/lib/utils";
 
 interface EncryptedTextProps {
@@ -21,8 +21,8 @@ const EncryptedText = memo(function EncryptedText({
 }: EncryptedTextProps) {
     const [displayText, setDisplayText] = useState<string[]>([]);
     const [revealedIndices, setRevealedIndices] = useState<Set<number>>(new Set());
-    const intervalsRef = useRef<NodeJS.Timeout[]>([]);
-    const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
+    const intervalsRef = useRef<number[]>([]);
+    const timeoutsRef = useRef<number[]>([]);
 
     const getRandomChar = useCallback(() => {
         return encryptedCharacters[Math.floor(Math.random() * encryptedCharacters.length)];

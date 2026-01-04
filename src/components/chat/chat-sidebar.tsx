@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     MessageSquare,
@@ -9,7 +9,6 @@ import {
     Trash2,
     MoreHorizontal,
     Search,
-    ChevronDown,
     Loader2
 } from 'lucide-react';
 import {
@@ -17,7 +16,8 @@ import {
     createChatSession,
     deleteChatSession,
     updateChatSession,
-    ChatSession
+} from '@/lib/chat-api';
+import type {ChatSession
 } from '@/lib/chat-api';
 import { cn } from '@/lib/utils';
 

@@ -1,5 +1,5 @@
 "use client";
-import React, { useId, useMemo, memo } from "react";
+import { useMemo, memo } from "react";
 import { cn } from "@/lib/utils";
 
 type SparklesCoreProps = {
@@ -15,7 +15,7 @@ type SparklesCoreProps = {
 
 // Memoized sparkle component to prevent re-renders
 const SparklesCore = memo(function SparklesCore({
-    id,
+    // id,
     background = "transparent",
     minSize = 0.4,
     maxSize = 1,
@@ -24,8 +24,8 @@ const SparklesCore = memo(function SparklesCore({
     particleDensity = 50, // Reduced from 800 to 50 for performance
     className,
 }: SparklesCoreProps) {
-    const generatedId = useId();
-    const actualId = id || generatedId;
+    // const generatedId = useId();
+    // const actualId = id || generatedId;
 
     // Memoize particle generation - only regenerate when props change
     const particles = useMemo(() => {
@@ -44,7 +44,7 @@ const SparklesCore = memo(function SparklesCore({
             className={cn("relative w-full h-full pointer-events-none", className)}
             style={{ background }}
         >
-            <style jsx>{`
+            <style>{`
                 @keyframes sparkle {
                     0%, 100% {
                         opacity: 0;

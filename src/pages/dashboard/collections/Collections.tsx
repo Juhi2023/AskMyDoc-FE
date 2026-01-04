@@ -30,7 +30,7 @@ export default function CollectionsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [showCreateModal, setShowCreateModal] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [editingId, setEditingId] = useState<number | null>(null);
+    // const [editingId, setEditingId] = useState<number | null>(null);
 
     useEffect(() => {
         loadCollections();
@@ -194,7 +194,8 @@ export default function CollectionsPage() {
                             key={collection.id}
                             collection={collection}
                             onDelete={() => handleDelete(collection.id)}
-                            onEdit={() => setEditingId(collection.id)}
+                            onEdit={()=>{}}
+                            // onEdit={() => setEditingId(collection.id)}
                         />
                     ))}
                 </div>

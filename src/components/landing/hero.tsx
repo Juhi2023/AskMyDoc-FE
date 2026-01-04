@@ -1,6 +1,6 @@
 'use client';
 
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { BackgroundBeams } from '@/components/ui/background-beams';
 import { Meteors } from '@/components/ui/meteors';

@@ -12,7 +12,7 @@ import logo from '../assets/AskMyDoc.svg'
 // Separate component to handle search params (needs Suspense boundary)
 function LoginForm() {
     const navigate = useNavigate();
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const { login, loginWithGoogle, isAuthenticated, isLoading: authLoading } = useAuth();
 
     const [formData, setFormData] = useState({

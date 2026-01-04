@@ -11,7 +11,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
 export default function VerifyOTPPage() {
     const navigate = useNavigate();
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const email = searchParams.get('email') || '';
     const purpose = searchParams.get('purpose') || 'verification';
 

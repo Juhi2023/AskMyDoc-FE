@@ -1,6 +1,6 @@
 'use client';
 
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import logo from '../../assets/AskMyDoc.svg'
 import { Link } from 'react-router-dom';

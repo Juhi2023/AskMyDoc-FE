@@ -23,7 +23,7 @@ interface GoogleDrivePickerModalProps {
 
 type LoadingState = 'idle' | 'loading-scripts' | 'authenticating' | 'picking' | 'downloading' | 'uploading';
 
-export function GoogleDrivePickerModal({ isOpen, onClose, onSuccess, selectedCollectionId }: GoogleDrivePickerModalProps) {
+export function GoogleDrivePickerModal({ isOpen, onClose, onSuccess }: GoogleDrivePickerModalProps) {
     const [loadingState, setLoadingState] = useState<LoadingState>('idle');
     const [error, setError] = useState<string | null>(null);
     const [accessToken, setAccessToken] = useState<string | null>(null);

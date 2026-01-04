@@ -50,7 +50,7 @@ export default function ChatPage() {
 }
 
 function ChatContent() {
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const { user } = useAuth();
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [input, setInput] = useState('');
@@ -62,7 +62,7 @@ function ChatContent() {
     const [docSearchQuery, setDocSearchQuery] = useState('');
     const [showScrollButton, setShowScrollButton] = useState(false);
     const [suggestedQuestions, setSuggestedQuestions] = useState<string[]>([]);
-    const [suggestionIndex, setSuggestionIndex] = useState(0);
+    // const [suggestionIndex, setSuggestionIndex] = useState(0);
     const [summaryDoc, setSummaryDoc] = useState<{ id: number; name: string } | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const messagesContainerRef = useRef<HTMLDivElement>(null);
@@ -73,10 +73,10 @@ function ChatContent() {
     // Auto-cycle through suggested questions
     useEffect(() => {
         if (suggestedQuestions.length > 0) {
-            const timer = setInterval(() => {
-                setSuggestionIndex(prev => (prev + 1) % suggestedQuestions.length);
-            }, 4000);
-            return () => clearInterval(timer);
+            // const timer = setInterval(() => {
+            //     setSuggestionIndex(prev => (prev + 1) % suggestedQuestions.length);
+            // }, 4000);
+            // return () => clearInterval(timer);
         }
     }, [suggestedQuestions]);
 

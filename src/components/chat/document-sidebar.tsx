@@ -1,4 +1,4 @@
-import { Document } from '@/types';
+import type { Document } from '@/types';
 import { Search, FileText, CheckCircle2, Circle } from 'lucide-react';
 import { useState } from 'react';
 

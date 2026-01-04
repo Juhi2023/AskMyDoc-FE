@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, memo } from 'react';
+import { useMemo, memo } from 'react';
 import { cn } from '@/lib/utils';
 
 interface MeteorsProps {

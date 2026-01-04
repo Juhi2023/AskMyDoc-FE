@@ -126,7 +126,7 @@ export function BulkUpload({
         setIsUploading(true);
 
         const pendingFiles = files.filter(f => f.status === 'pending');
-        const uploadPromises = pendingFiles.map((file, i) => {
+        const uploadPromises = pendingFiles.map((file, ) => {
             const originalIndex = files.findIndex(f => f === file);
             return uploadFile(file, originalIndex);
         });

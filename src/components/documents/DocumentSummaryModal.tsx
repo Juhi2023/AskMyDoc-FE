@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, Loader2, Sparkles, BookOpen, Clock, BarChart3, List, RefreshCw } from 'lucide-react';
+import { X, Loader2, Sparkles, BookOpen, Clock, BarChart3, RefreshCw } from 'lucide-react';
 import api from '@/lib/api';
 import toast from 'react-hot-toast';
 

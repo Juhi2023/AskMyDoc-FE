@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef, memo, useCallback } from 'react';
+import { useState, useEffect, useRef, memo, useCallback } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState, useEffect, Suspense, memo } from 'react';
+import { useCallback, useState, useEffect, Suspense } from 'react';
 import { useDropzone } from 'react-dropzone';
 import api, { getErrorMessage } from '@/lib/api';
 import type { Document, DocumentListResponse } from '@/types';
@@ -9,7 +9,7 @@ import type { Collection } from '@/lib/collections-api';
 import {
     Upload, FileText, Trash2, RefreshCw, Search,
     Loader2, X, CheckCircle, AlertCircle, Clock,
-    Link as LinkIcon, ChevronDown, Folders, Eye, Youtube, Globe, Sparkles
+    Link as LinkIcon, Eye, Youtube, Globe, Sparkles
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { UrlUploadModal } from '@/components/documents/UrlUploadModal';
@@ -34,7 +34,7 @@ export default function DocumentsPage() {
 }
 
 function DocumentsContent() {
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const preSelectedCollectionId = searchParams.get('collection');
 
     const [documents, setDocuments] = useState<Document[]>([]);
@@ -47,10 +47,10 @@ function DocumentsContent() {
 
     // Collection state
     const [collections, setCollections] = useState<Collection[]>([]);
-    const [selectedCollectionId, setSelectedCollectionId] = useState<number | null>(
+    const [selectedCollectionId,] = useState<number | null>(
         preSelectedCollectionId ? parseInt(preSelectedCollectionId) : null
     );
-    const [showCollectionDropdown, setShowCollectionDropdown] = useState(false);
+    // const [showCollectionDropdown, setShowCollectionDropdown] = useState(false);
 
     // Document preview state
     const [viewingDoc, setViewingDoc] = useState<Document | null>(null);

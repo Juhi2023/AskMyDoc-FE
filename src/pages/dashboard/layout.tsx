@@ -4,9 +4,9 @@ import { useEffect, useState, useRef, useCallback, memo } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { ProfileModal } from '@/components/ProfileModal';
 import {
-    FileText, MessageSquare, FolderOpen, Settings, LogOut,
-    Menu, X, ChevronRight, Home, Loader2, BarChart3, Folders,
-    ChevronDown, Bell, History, User
+    MessageSquare, FolderOpen, Settings, LogOut,
+    Menu, X, ChevronRight, Home, Loader2, BarChart3,
+    ChevronDown, History, User
 } from 'lucide-react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../assets/AskMyDoc.svg'
@@ -51,11 +51,7 @@ const NavItem = memo(function NavItem({
 
 NavItem.displayName = "NavItem";
 
-export default function DashboardLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+export default function DashboardLayout() {
     const navigate = useNavigate();
     const location = useLocation();
     const pathname = location.pathname
@@ -85,7 +81,7 @@ export default function DashboardLayout({
     const closeSidebar = useCallback(() => setSidebarOpen(false), []);
     const openSidebar = useCallback(() => setSidebarOpen(true), []);
     const toggleProfile = useCallback(() => setProfileOpen(prev => !prev), []);
-    const closeProfile = useCallback(() => setProfileOpen(false), []);
+    // const closeProfile = useCallback(() => setProfileOpen(false), []);
     const closeLogoutConfirm = useCallback(() => setShowLogoutConfirm(false), []);
 
     const handleLogout = useCallback(() => {

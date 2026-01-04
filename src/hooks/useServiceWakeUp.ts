@@ -33,7 +33,7 @@ export function useServiceWakeUp() {
         allHealthy: false,
     });
 
-    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const intervalRef = useRef<number | null>(null);
     const isMounted = useRef(true);
 
     const checkHealth = useCallback(async () => {

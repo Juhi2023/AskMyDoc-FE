@@ -50,7 +50,7 @@ export function UrlUploadModal({ isOpen, onClose, onSuccess, selectedCollectionI
         setIsLoading(true);
 
         try {
-            const response = await api.post('/documents/from-url', {
+             await api.post('/documents/from-url', {
                 url: url.trim(),
                 title: title.trim() || undefined
             });

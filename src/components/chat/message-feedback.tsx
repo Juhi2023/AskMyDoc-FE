@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThumbsUp, ThumbsDown, Flag, X, Loader2 } from 'lucide-react';
-import { submitMessageFeedback, ChatMessage } from '@/lib/chat-api';
+import { submitMessageFeedback,  } from '@/lib/chat-api';
+import type { ChatMessage } from '@/lib/chat-api';
 import { cn } from '@/lib/utils';
 
 interface MessageFeedbackProps {

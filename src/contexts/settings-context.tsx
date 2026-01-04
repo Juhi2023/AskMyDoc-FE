@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
-import type { SettingsWithModels, LLMProvider, LLMModel } from '@/lib/settings-api';
+import type { LLMProvider, LLMModel } from '@/lib/settings-api';
 import { getSettings, updateSettings, deleteApiKey } from '@/lib/settings-api';
 import { useAuth } from '@/contexts/AuthContext';
 

@@ -1,9 +1,8 @@
 'use client';
 
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { Upload, Search, MessageSquare, Zap, Shield, Clock } from 'lucide-react';
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
-import { cn } from '@/lib/utils';
 
 // Move features array outside component to prevent recreation on each render
 const features = [

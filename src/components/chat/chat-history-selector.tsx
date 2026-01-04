@@ -7,6 +7,9 @@ import {
 } from 'lucide-react';
 import {
     getChatSessions,
+} from '@/lib/chat-api';
+
+import type {
     ChatSession,
 } from '@/lib/chat-api';
 

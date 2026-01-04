@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, FileType, File, Plus } from 'lucide-react';
 import { SpotlightCard } from '@/components/ui/spotlight-card';
@@ -58,7 +57,7 @@ export function ToolsShowcase() {
 
                 {/* Format Cards */}
                 <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-                    {supportedFormats.map((format, i) => (
+                    {supportedFormats.map((format) => (
                         <motion.div
                             key={format.name}
                             initial={{ opacity: 0, y: 20 }}

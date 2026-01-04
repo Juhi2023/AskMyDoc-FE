@@ -1,10 +1,10 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { signInWithPopup, signOut as firebaseSignOut } from 'firebase/auth';
 import type { User, Token, UserLogin, UserCreate } from '@/types';
-import api, { tokenManager, getErrorMessage } from '@/lib/api';
+import api, { tokenManager } from '@/lib/api';
 import { auth, googleProvider } from '@/lib/firebase';
 
 interface AuthContextType {
